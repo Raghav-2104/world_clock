@@ -27,7 +27,7 @@ class WorldTime{
       DateTime now=DateTime.parse(datetime);
       now=now.add(Duration(hours: int.parse(offset.substring(0,3)),minutes:int.parse(offset.substring(4,6)) ));
       time=DateFormat().add_jm().format(now);
-      isDay=now.hour>=6 && now.hour<=20 ? true: false;
+      isDay=now.hour>=6 && now.hour<20?true: false;
     }catch(e)
     {
       time='Could not get time';
